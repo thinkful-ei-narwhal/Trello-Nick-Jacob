@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import STORE from './store';
+import './listStyles.css'
 
 export default function List(props) {
   const cardComponents = props.cards.map(cardId => {
