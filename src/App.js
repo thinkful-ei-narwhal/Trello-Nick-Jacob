@@ -1,9 +1,18 @@
 import React from 'react';
+import List from './List';
 
-function App() {
+function App(props) {
+  const listComponents = props.store.lists.map(list => <List key={list.id} header={list.header} cards={list.cardIds} />);
   return (
     <main className='App'>
-      {/* content goes here */}
+      <header>
+        <h1>
+          Trelloyes!
+        </h1>
+      </header>
+      <div className='App-list'>
+        {listComponents}
+      </div>
     </main>
   );
 }
